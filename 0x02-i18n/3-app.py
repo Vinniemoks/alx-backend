@@ -3,6 +3,11 @@
 """
 from flask_babel import Babel
 from flask import Flask, render_template, request
+from jinja2 import Environment, select_autoescape
+
+env = Environment(
+    autoescape=select_autoescape(['html', 'xml'])
+)
 
 
 class Config:
